@@ -7,7 +7,6 @@ var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 
 var imgs = document.getElementsByClassName("image");
-console.log(typeof imgs);
 
 for (i=0; i<imgs.length; i++) {
   imgs[i].onclick = function(){
