@@ -1,105 +1,257 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bella Rong</title>
+  <title>Bella Rong's Little World</title>
   <link rel="icon" href="icon/favicon.ico">
   <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.24.0/mapbox-gl.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap" rel="stylesheet">
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/d0fea11b26c05b353d18189f4/4a2f517861a58b3a00a2b9e35.js");</script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;500&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-19ZLPZH1J0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-19ZLPZH1J0');
+  </script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-19ZLPZH1J0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-19ZLPZH1J0');
-</script>
-
 <body>
+  <header class="hero" id="top">
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="#gallery">Gallery</a>
+      <a href="#voice">Voice</a>
+      <a href="#journey">Journey</a>
+      <a href="#tree-hole">Tree Hole</a>
+    </nav>
 
-  <h1> Bella Rong </h1>
-
-  <p> Hi I'm Bella, child to Chenxuan and Mingzhu and I am <span id="age">0</span> days old. My Chinese name is <span class="chinese" >戎泩楹</span> (Rong Shengying), with the meaning of a child born overseas under a Jacaranda tree.
-  </p>
-
-  <div class="row">
-  
-    <div class="column">
-      <p>Birth</p>
-      <img class="image" src="images/birth - 0.jpeg">
-      <img class="image" src="images/birth - 11.jpeg">
-      <img class="image" src="images/birth - 1.jpeg">
-      <img class="image" src="images/birth - 2.jpeg">
-      <img class="image" src="images/birth - 3.jpeg">
-      <img class="image" src="images/birth - 4.jpeg">
-      <img class="image" src="images/birth - 5.jpeg">
-      <img class="image" src="images/birth - 6.jpeg">
-      <img class="image" src="images/birth - 7.jpeg">
-      <img class="image" src="images/birth - 8.jpeg">
-      <img class="image" src="images/birth - 9.jpeg">
-
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Bella's growing-up atlas</p>
+        <h1>Bella Rong</h1>
+        <p class="intro">
+          Hi, I'm Bella, child to Chenxuan and Mingzhu. I am <strong><span id="age">0</span> days old</strong>.
+          My Chinese name is <span class="chinese">戎泩楹</span> (Rong Shengying), for a child born overseas under a Jacaranda tree.
+        </p>
+      </div>
+      <figure class="hero-photo">
+        <img src="images/day_ten - 12.jpeg" alt="Bella at day ten">
+        <figcaption>Little days, big world</figcaption>
+      </figure>
     </div>
+  </header>
 
-    <div class="column">
-      <p>First 3 days</p>
-      <img class="image" src="images/parenting - 1.jpeg">
-      <img class="image" src="images/parenting - 2.jpeg">
-      <img class="image" src="images/parenting - 3.jpeg">
-      <img class="image" src="images/parenting - 4.jpeg">
-      <img class="image" src="images/parenting - 5.jpeg">
-      <img class="image" src="images/parenting - 6.jpeg">
-      <img class="image" src="images/parenting - 7.jpeg">
-      <img class="image" src="images/parenting - 8.jpeg">
-      <img class="image" src="images/parenting - 9.jpeg">
-      <img class="image" src="images/parenting - 10.jpeg">
-    </div>
+  <main>
+    <section class="section media-gate-section" id="media-gate" aria-labelledby="media-gate-title">
+      <div class="media-gate-card">
+        <div class="section-heading">
+          <p class="eyebrow">Family-only memories</p>
+          <h2 id="media-gate-title">Open Bella's gallery and voice archive</h2>
+        </div>
 
-    <div class="column">
-      <p>Crying</p> 
-      <img class="image" src="images/parenting - 11.jpeg">
-      <img class="image" src="images/parenting - 12.jpeg">
-      <img class="image" src="images/parenting - 13.jpeg">
-      <img class="image" src="images/parenting - 14.jpeg">
-      <img class="image" src="images/parenting - 15.jpeg">
+        <form class="unlock-form" id="media-gate-form">
+          <label for="media-key">Family password</label>
+          <div class="inline-form">
+            <input id="media-key" name="media-key" type="password" autocomplete="current-password" placeholder="Enter the family password">
+            <button type="submit">Unlock</button>
+          </div>
+          <p class="hint" id="media-gate-hint">Gallery photos and voice clips stay closed on this browser until the family password is entered.</p>
+        </form>
+      </div>
+    </section>
 
-    </div>
+    <section class="section" id="gallery" data-private-media hidden aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <p class="eyebrow">Photo garden</p>
+        <h2 id="gallery-title">Pictures by age</h2>
+      </div>
 
-    <div class="column">
-      <p> Day ten </p>
-      <img class="image" src="images/day_ten - 1.jpeg">
-      <img class="image" src="images/day_ten - 0.jpeg">
-      <img class="image" src="images/day_ten - 9.jpeg">
-      <img class="image" src="images/day_ten - 3.jpeg">
-      <img class="image" src="images/day_ten - 4.jpeg">
-      <img class="image" src="images/day_ten - 5.jpeg">
-      <img class="image" src="images/day_ten - 7.jpeg">
-      <img class="image" src="images/day_ten - 8.jpeg">
-      <img class="image" src="images/day_ten - 10.jpeg">
-      <img class="image" src="images/day_ten - 12.jpeg">
-    </div>
+      <div class="age-tabs" role="tablist" aria-label="Choose an age album">
+        <button class="age-tab is-active" type="button" data-filter="all">All</button>
+        <button class="age-tab" type="button" data-filter="birth">Birth</button>
+        <button class="age-tab" type="button" data-filter="first-days">First 3 days</button>
+        <button class="age-tab" type="button" data-filter="crying">Tiny storms</button>
+        <button class="age-tab" type="button" data-filter="day-ten">Day ten</button>
+      </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
+      <div class="gallery-grid">
+        <article class="album-card" data-age="birth">
+          <div class="album-title"><span>0 days</span><h3>Birth</h3></div>
+          <div class="photo-stack">
+            <img class="image" data-src="images/birth - 0.jpeg" alt="Bella birth photo 1">
+            <img class="image" data-src="images/birth - 11.jpeg" alt="Bella birth photo 2">
+            <img class="image" data-src="images/birth - 1.jpeg" alt="Bella birth photo 3">
+            <img class="image" data-src="images/birth - 2.jpeg" alt="Bella birth photo 4">
+            <img class="image" data-src="images/birth - 3.jpeg" alt="Bella birth photo 5">
+            <img class="image" data-src="images/birth - 4.jpeg" alt="Bella birth photo 6">
+            <img class="image" data-src="images/birth - 5.jpeg" alt="Bella birth photo 7">
+            <img class="image" data-src="images/birth - 6.jpeg" alt="Bella birth photo 8">
+            <img class="image" data-src="images/birth - 7.jpeg" alt="Bella birth photo 9">
+            <img class="image" data-src="images/birth - 8.jpeg" alt="Bella birth photo 10">
+            <img class="image" data-src="images/birth - 9.jpeg" alt="Bella birth photo 11">
+          </div>
+        </article>
 
-      <!-- The Close Button -->
-      <span class="close">&times;</span>
+        <article class="album-card" data-age="first-days">
+          <div class="album-title"><span>1-3 days</span><h3>First cuddles</h3></div>
+          <div class="photo-stack">
+            <img class="image" data-src="images/parenting - 1.jpeg" alt="Bella first days photo 1">
+            <img class="image" data-src="images/parenting - 2.jpeg" alt="Bella first days photo 2">
+            <img class="image" data-src="images/parenting - 3.jpeg" alt="Bella first days photo 3">
+            <img class="image" data-src="images/parenting - 4.jpeg" alt="Bella first days photo 4">
+            <img class="image" data-src="images/parenting - 5.jpeg" alt="Bella first days photo 5">
+            <img class="image" data-src="images/parenting - 6.jpeg" alt="Bella first days photo 6">
+            <img class="image" data-src="images/parenting - 7.jpeg" alt="Bella first days photo 7">
+            <img class="image" data-src="images/parenting - 8.jpeg" alt="Bella first days photo 8">
+            <img class="image" data-src="images/parenting - 9.jpeg" alt="Bella first days photo 9">
+            <img class="image" data-src="images/parenting - 10.jpeg" alt="Bella first days photo 10">
+          </div>
+        </article>
 
-      <!-- Modal Content (The Image) -->
-      <img class="modal-content" id="img01">
+        <article class="album-card" data-age="crying">
+          <div class="album-title"><span>Baby feelings</span><h3>Tiny storms</h3></div>
+          <div class="photo-stack">
+            <img class="image" data-src="images/parenting - 11.jpeg" alt="Bella crying photo 1">
+            <img class="image" data-src="images/parenting - 12.jpeg" alt="Bella crying photo 2">
+            <img class="image" data-src="images/parenting - 13.jpeg" alt="Bella crying photo 3">
+            <img class="image" data-src="images/parenting - 14.jpeg" alt="Bella crying photo 4">
+            <img class="image" data-src="images/parenting - 15.jpeg" alt="Bella crying photo 5">
+          </div>
+        </article>
 
-      <!-- Modal Caption (Image Text) -->
-      <div id="caption"></div>
-    </div>
-  <div>
+        <article class="album-card" data-age="day-ten">
+          <div class="album-title"><span>10 days</span><h3>Day ten</h3></div>
+          <div class="photo-stack">
+            <img class="image" data-src="images/day_ten - 1.jpeg" alt="Bella day ten photo 1">
+            <img class="image" data-src="images/day_ten - 0.jpeg" alt="Bella day ten photo 2">
+            <img class="image" data-src="images/day_ten - 9.jpeg" alt="Bella day ten photo 3">
+            <img class="image" data-src="images/day_ten - 3.jpeg" alt="Bella day ten photo 4">
+            <img class="image" data-src="images/day_ten - 4.jpeg" alt="Bella day ten photo 5">
+            <img class="image" data-src="images/day_ten - 5.jpeg" alt="Bella day ten photo 6">
+            <img class="image" data-src="images/day_ten - 7.jpeg" alt="Bella day ten photo 7">
+            <img class="image" data-src="images/day_ten - 8.jpeg" alt="Bella day ten photo 8">
+            <img class="image" data-src="images/day_ten - 10.jpeg" alt="Bella day ten photo 9">
+            <img class="image" data-src="images/day_ten - 12.jpeg" alt="Bella day ten photo 10">
+          </div>
+        </article>
+      </div>
+    </section>
 
+
+    <section class="section voice-section" id="voice" data-private-media hidden aria-labelledby="voice-title">
+      <div class="section-heading">
+        <p class="eyebrow">Voice keepsakes</p>
+        <h2 id="voice-title">Bella's voice by age</h2>
+      </div>
+
+      <div class="voice-tabs" role="tablist" aria-label="Choose a voice age group">
+        <button class="voice-tab is-active" type="button" data-voice-filter="all">All</button>
+        <button class="voice-tab" type="button" data-voice-filter="newborn">Newborn</button>
+        <button class="voice-tab" type="button" data-voice-filter="first-month">First month</button>
+        <button class="voice-tab" type="button" data-voice-filter="first-words">First words</button>
+        <button class="voice-tab" type="button" data-voice-filter="songs">Songs</button>
+        <button class="voice-tab" type="button" data-voice-filter="siblings">Siblings</button>
+      </div>
+
+      <div class="voice-grid" id="voice-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section journey-section" id="journey" aria-labelledby="journey-title">
+      <div class="section-heading">
+        <p class="eyebrow">Around the world</p>
+        <h2 id="journey-title">Bella's journey map</h2>
+      </div>
+
+      <div class="journey-layout">
+        <div class="world-map mapbox-card" aria-label="Map showing Bella's journey stops">
+          <div class="fallback-map" id="fallback-map" aria-hidden="true">
+            <div class="map-line map-line-china"></div>
+            <div class="map-line map-line-nz"></div>
+            <div class="map-line map-line-singapore"></div>
+            <button class="map-stop is-active" type="button" data-place="sydney" style="--x: 78%; --y: 72%;"><span>Sydney</span></button>
+            <button class="map-stop" type="button" data-place="china2023" style="--x: 58%; --y: 38%;"><span>China</span></button>
+            <button class="map-stop" type="button" data-place="newzealand" style="--x: 72%; --y: 86%;"><span>New Zealand</span></button>
+            <button class="map-stop" type="button" data-place="singapore" style="--x: 67%; --y: 58%;"><span>Singapore</span></button>
+            <button class="map-stop" type="button" data-place="suzhou" style="--x: 61%; --y: 42%;"><span>Suzhou</span></button>
+            <button class="map-stop" type="button" data-place="xian" style="--x: 55%; --y: 40%;"><span>Xi'an</span></button>
+            <button class="map-stop" type="button" data-place="sichuan" style="--x: 53%; --y: 47%;"><span>Sichuan</span></button>
+            <button class="map-stop" type="button" data-place="guangzhou" style="--x: 59%; --y: 50%;"><span>Guangzhou</span></button>
+          </div>
+          <div id="bella-map" class="bella-map"></div>
+          <div class="map-token-card" id="map-token-card">
+            <strong>Map loading</strong>
+            <span>If Mapbox cannot load, Bella's simple journey map stays visible here.</span>
+          </div>
+        </div>
+        <aside class="journey-card" id="journey-card" aria-live="polite">
+          <span class="journey-date">18 Feb 2023</span>
+          <h3>Sydney, Australia</h3>
+          <p>Where Bella's first chapter began under southern skies and Jacaranda stories.</p>
+        </aside>
+      </div>
+
+      <div class="journey-timeline" id="journey-timeline" aria-label="Bella's travel timeline"></div>
+    </section>
+
+    <section class="section tree-hole-section" id="tree-hole" aria-labelledby="tree-title">
+      <div class="section-heading">
+        <p class="eyebrow">Secret tree hole</p>
+        <h2 id="tree-title">Dad's letters for later</h2>
+      </div>
+
+      <div class="tree-hole">
+        <div class="tree-illustration" aria-hidden="true">
+          <div class="tree-leaves"></div>
+          <div class="tree-trunk"><span></span></div>
+        </div>
+
+        <div class="letter-panel">
+          <form class="unlock-form" id="unlock-form">
+            <label for="tree-key">Family key</label>
+            <div class="inline-form">
+              <input id="tree-key" name="tree-key" type="password" autocomplete="current-password" placeholder="Ask dad for the key">
+              <button type="submit">Open</button>
+            </div>
+            <p class="hint">Static site note: letters are saved in this browser with local storage.</p>
+          </form>
+
+          <div class="letter-vault" id="letter-vault" hidden>
+            <form id="letter-form" class="letter-form">
+              <div class="form-row">
+                <label for="letter-title">Letter title</label>
+                <input id="letter-title" required maxlength="80" placeholder="For your seventh birthday">
+              </div>
+              <div class="form-row split-row">
+                <label for="open-year">Open year</label>
+                <input id="open-year" required type="number" min="2026" max="2126" value="2033">
+              </div>
+              <div class="form-row">
+                <label for="letter-body">Letter</label>
+                <textarea id="letter-body" required rows="6" placeholder="Dear Bella..."></textarea>
+              </div>
+              <button type="submit">Save letter</button>
+            </form>
+
+            <div class="letters-list" id="letters-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="myModal" class="modal" aria-hidden="true" role="dialog" aria-label="Expanded photo">
+    <button class="close" type="button" aria-label="Close photo">&times;</button>
+    <button class="modal-nav modal-prev" type="button" aria-label="Previous photo">&#8249;</button>
+    <img class="modal-content" id="img01" alt="">
+    <button class="modal-nav modal-next" type="button" aria-label="Next photo">&#8250;</button>
+    <div id="caption"></div>
+  </div>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.24.0/mapbox-gl.js"></script>
+  <script src="scripts/voices.js"></script>
+  <script src="scripts/modal.js"></script>
+  <script src="scripts/age.js"></script>
 </body>
-
-<script src="scripts/modal.js"></script>
-<script src="scripts/age.js"></script>
+</html>
